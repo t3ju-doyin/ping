@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+$font:  'Libre Franklin', sans-serif;
+
+$Blue: hsl(223, 87%, 63%);
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+$Gray: #969696;
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: $font;
+}
+main{
+    width: 80%;
+    margin: 2.5rem auto;
+    color: $Gray;
+    box-sizing: border-box;
+    // max-width: 400px;
+
+    header,form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        max-width: 100%;
+    }
+    header{
+        img{
+            width: 23%;
+            max-width:80px;
+            margin-bottom: 2rem;
+        }
+        p.launch{
+            margin-bottom: .6rem;
+            word-spacing: .1rem;
+            span{
+                color: $Very-Dark-Blue;
+                font-weight: bolder;
+            }
+        }
+        p.subscribe{
+            margin: 0 auto ;
+            margin-bottom: 1.3rem;
+            width: 80%;
+            max-width: 160px;
+            font-size: .7rem;
+            font-weight: bold;
+        }
+    }
+    form{
+        // max-width: 260px;
+        margin: 0 auto;
+        input,button{
+            font-family: $font;
+        }
+        input{
+            border: none;
+            // max-width: 100%;
+            border: 1px solid $Pale-Blue;
+            padding:.5rem 3rem .5rem 1.5rem;
+            border-radius: 25px;
+            margin-bottom: .7rem;
+
+            
+        }
+        ::placeholder{
+            color: hsl(0, 4%, 85%);
+        }
+        input:focus{
+            outline: .5px solid $Pale-Blue;
+        }
+        button{
+            width:90%;
+            max-width: 240px;
+            border: none;
+            cursor: pointer;
+            background-color: $Blue;
+            margin-bottom: 4rem;
+            color: white;
+            border-radius: 20px;
+            padding: .7rem 0;
+            font-weight: bold;
+            font-size: .7rem;
+            letter-spacing: .03rem;
+            box-shadow:2px 5px 15px $Pale-Blue ;
+        }
+        button:hover{
+            transform: scale(105%);
+            transition: .5s;
+        }
+    }
+    section.hero-image{
+        margin-bottom: 5rem;
+    }
+    footer{
+        margin: 0 auto;
+        width: 55%;
+        max-width: 150px;
+        .socials{
+            max-width: 135px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 1.5rem;
+            img{
+                align-self: center;
+                width: 10%;
+                cursor: pointer;
+                border: 1px solid hsl(0, 4%, 95%);
+                border-radius: 25px;
+                padding:.3rem;
+            }
+        }
+        .copyright{
+            img{
+                width: 5%;
+            }
+            font-size: .5rem;
+            padding-left: .2rem;
+        }
+    }
+}
+@media (min-width:800px) {
+    main{
+        max-width: 600px;
+        header{
+            img{
+                width: 12%;
+            }
+            p.launch{
+                font-size: 1.8rem;
+            }
+            p.subscribe{
+                font-size: .8rem;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+            max-width: 400px;
+            margin-bottom: 4rem;
+            
+            input{
+                width: 60%;
+                margin-right: .7rem !important;
+                margin: 0;
+                padding: .7rem 1rem !important;
+
+            }
+            button{
+                width: 40% !important;
+                margin: 0;
+                padding: .7rem .6rem !important;
+
+            }
+        }
+        section.hero-image{
+            margin-bottom: 2rem;
+        }
+    }
+}
